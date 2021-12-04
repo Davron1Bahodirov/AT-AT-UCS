@@ -14,23 +14,23 @@
 
     <div class="row">
       <div class="col-md-8 m-5">
-          <form >
+          <form>
               <div class="form-group">
                   <label for="">name</label>
-                  <input type="text" class="form-control">
+                  <input type="text" v-model="newName" class="form-control">
               </div>
 
               <div class="form-group">
                   <label for="">price</label>
-                  <input type="text" class="form-control">
+                  <input type="text" v-model="newPrice" class="form-control">
               </div>
 
               <div class="form-group">
                   <label for="">image</label>
-                  <input type="text" class="form-control">
+                  <input type="text" v-model="newImage" class="form-control">
               </div>
 
-              <button class="btn btn-primary">add product</button>
+              <button class="btn btn-primary" type="button" @click="add">add product</button>
           </form>
 
       </div>

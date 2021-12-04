@@ -13,6 +13,10 @@ Vue.component('my-list',{
 new Vue({
     el: ".container",
     data: {
+        newId:4,
+        newName: "",
+        newPrice: "",
+        newImage: "",
         products: [
             {
                 id: 1,
@@ -33,5 +37,18 @@ new Vue({
                 image: "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             }
         ]
+    },
+    methods:{
+        add: function(){
+            this.products.push({
+                id:this.newId,
+                name:this.newName,
+                price:this.newPrice,
+                image:this.newImage
+            }),
+            this.newName='',
+            this.newPrice='',
+            this.newImage=''
+        }
     }
 })
