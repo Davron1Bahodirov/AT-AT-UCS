@@ -1,3 +1,14 @@
+Vue.component('my-list',{
+    props: ['todo'],
+    template: `
+         <tr>
+               <td>{{todo.id}}</td>
+                <td>{{todo.name}}</td>
+                 <td>{{todo.price}}</td>
+                <td> <img width="100" :src="todo.image"></td>
+          </tr>
+    `
+})
 
 new Vue({
     el: ".container",
