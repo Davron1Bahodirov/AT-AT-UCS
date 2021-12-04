@@ -41,14 +41,15 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>id</th> <th>name</th> <th>price</th><th>image</th>
+                            <th>id</th> <th>name</th> <th>price</th><th>image</th> <th>action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr
                            is="my-list"
-                          v-for="item in products"
+                          v-for="(item,index) in products"
                           :todo="item"
+                           @remove="products.splice(index,1)"
                         ></tr>
                     </tbody>
                 </table>

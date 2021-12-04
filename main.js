@@ -6,6 +6,7 @@ Vue.component('my-list',{
                 <td>{{todo.name}}</td>
                  <td>{{todo.price}}</td>
                 <td> <img width="100" :src="todo.image"></td>
+                <td> <button @click="$emit('remove')"> Remove</button> </td>
           </tr>
     `
 })
@@ -41,7 +42,7 @@ new Vue({
     methods:{
         add: function(){
             this.products.push({
-                id:this.newId,
+                id:this.newId++,
                 name:this.newName,
                 price:this.newPrice,
                 image:this.newImage
