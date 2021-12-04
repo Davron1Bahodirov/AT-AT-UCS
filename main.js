@@ -6,7 +6,7 @@ Vue.component('my-list',{
                 <td>{{todo.name}}</td>
                  <td>{{todo.price}}</td>
                 <td> <img width="100" :src="todo.image"></td>
-                <td> <button @click="$emit('remove')"> Remove</button> </td>
+                <td> <button class="btn btn-danger" @click="$emit('remove')"> Remove</button> </td>
           </tr>
     `
 })
